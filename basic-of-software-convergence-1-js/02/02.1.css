@@ -1,0 +1,137 @@
+/* ul {
+    background-color: lightblue;
+    color: blue;
+} */
+
+/* 전체 요소 모두 선택 */
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/* 전체 background의 색을 조정하면 c2 중간의 p2와 같은 영역에도 색이 입혀져서 다른 결과가 나타남 */
+/* body {
+    background-color: beige;
+} */
+
+/* 태그 selector */
+header {
+    background-color: aliceblue;
+}
+
+h2 {
+    color: blue;
+}
+
+/* class를 찾을때에는 .을 사용, id를 찾을때에는 #사용
+class와 id에 동시에 색을 입혔을 경우에는 id가 우선권을 가짐 ( id>class>속성 ) */
+/* .c1 {
+    background-color: yellow;
+} */
+/* #b1 {
+    background-color: yellow;
+} */
+
+/* 클래스 selector */
+.c2 {
+    background-color: brown;
+}
+
+/* d1 id안의 h2에만 색을 입히고 싶음 */
+/* 아이디 selector, 부모자식관계 */
+#d1>h2 {
+    color: green;
+}
+
+/* 계층구조 이해하기 ( header 안의 ul 안의 li ) */
+/* 자손관계 selector */
+/* header > ul > li {
+    color: green;
+} */
+header li {
+    color: green;
+    list-style: none;
+    margin: 10px;
+}
+
+/* 속성 alt를 가진 이미지중에서도 html과 js를 수정하는것, 고치는 값이 같다면 쉼표사용 후 연결가능  */
+/* img[alt] {
+    width: 100px;
+    height: 100px;
+} */
+/* 속성 selector, 그룹화 */
+img[alt=html], img[alt=js] {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    border-radius: 25%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    /* 박스영역으로 보이도록 수정 */
+    /* flex와의 차이점 = 단어 하나하나를 박스영역으로 만들기 위해 사용 */
+    padding: 5px;
+}
+
+/* 마우스를 가져다대면 red나타남 */
+/* 가상클래스 selector */
+a:hover {
+    color: white;
+    background-color: red;
+}
+
+/* 박스모델 */
+/* article {
+    border: 10px solid blue;
+} */
+article {
+    border: 5px dashed red;
+    margin: 10px 10px 10px 20px;
+    padding: 20px 40px;
+    /* margin= 바깥영역, padding= 안쪽연역 */
+    /* 순서대로 위 오른쪽 아래 왼쪽의 공간확보, 생략 시 반복( 예시로 padding의 경우 위20 오른쪽40 아래20 왼쪽40 ) */
+}
+
+header {
+    display: flex;
+    /* header박스안의 div와 ul을 가로로 정렬하기 위해 사용 */
+    justify-content: space-between;
+    /* 좌우 정렬( 공간에 맞게 정렬 ) */
+    align-items: start;
+    /* 상하 정렬( 위 ) */
+    padding: 10px;
+    height: 200px;
+}
+
+div, ul {
+    border: 2px solid green;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+}
+
+/* 미디어 쿼리 */
+/* 최소크기가 1024일때까지 (1024px~) */
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    header {
+        background-color: chartreuse;
+    }
+}
+
+/* 최대크기가 1024일때까지 (~1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+}

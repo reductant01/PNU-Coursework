@@ -1,0 +1,51 @@
+#divContent > div {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp0, .sp1, .sp2, .sp3, .sp4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  color: white;
+
+  border-radius: 50%;
+  margin: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.sp0 {
+  background-color: orange
+}
+
+.sp1 {
+  background-color: skyblue;
+}
+
+.sp2 {
+  background-color: orangered;
+}
+
+.sp3 {
+  background-color: gray;
+}
+
+.sp4 {
+  background-color: greenyellow;
+}
+
+#spplus {
+  font-size: xx-large;
+  font-weight: bold;
+  color: gray;
+}

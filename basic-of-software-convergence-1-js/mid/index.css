@@ -1,0 +1,92 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, header, main, #content, #sec1, #sec2, #sec3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: purple;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  width: 60%;
+  flex-direction: column;
+} 
+
+#content, #sec1, #sec2, #sec3{
+  width: 100%;
+  flex-direction: column;
+}
+
+#sec1, #sec2, #sec3 {
+  border: none;
+  padding: 20px;
+}  
+
+#wSec {
+  font-size: large;
+  font-weight: bold;
+  height: 20px;
+  margin: 20px;
+  border: none;
+}
+
+#inSec {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+[type='text'] {
+  padding: 10px;
+  width: 100%;
+}
+
+#sec3 {
+  background-color: purple;
+  width: 90%;
+  height: 40px;
+}
+
+#sec2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+
+  padding: 10px;
+  width: 30%;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+  background-color: plum;
+  color: white;
+  margin: 10px;
+
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: pink;
+}

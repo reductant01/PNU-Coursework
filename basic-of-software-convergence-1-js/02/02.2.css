@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  /* body안의 내용을 가로로 배치 */
+  justify-content: center;
+  /* 가로축 기준 중앙에 배치 */
+  align-items: start;
+  /* 세로축 기준 위쪽에 배치 */
+}
+
+/* id가 content인 박스를 찾아서 안쪽영역 20px로 적용 */
+#content {
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+header {
+  margin: 20px;
+  padding: 10px;
+}
+
+header>div,
+header>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header>div {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+header>ul {
+  margin: 20px;
+}
+
+header li {
+  list-style: none;
+  display: inline-flex;
+  /* span으로 설정하면 margin과 padding을 조정할수 없기 때문에 inline-flex로 설정 */
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: royalblue;
+}
+
+/* a라는 가상의 태그가 아니라 li를 hover로 하여 색이 꽉 차도록 함 */
+header li:hover {
+  background-color: coral;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+article,
+section {
+  margin: 30px;
+}
+
+h1 {
+  font-size: x-large;
+  margin-bottom: 20px;
+  text-align: center;
+  /* flex박스가 아니기에 text-align코드 사용 */
+}
+
+article {
+  padding: 40px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+}
+
+section>div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+section p {
+  margin-left: 50px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: small;
+}
+
+
+/* 미디어쿼리 */
+@media screen and (min-width: 1280px) {
+
+  /* 최소1280px부터 id가 content인 박스를 화면크기기준 가로로 80%를 차지하도록 설정 */
+  #content {
+    width: 80%;
+  }
+
+  /* 최소1280px부터 header박스가 flex가 되도록 하여 div와 ul이 가로로 배치되도록 함 */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
