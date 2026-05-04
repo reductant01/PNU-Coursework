@@ -3,7 +3,7 @@
 #ifndef UNIX3_H
 #define UNIX3_H
 void foo();
-coid bar();
+void bar();
 
 #endif
 
