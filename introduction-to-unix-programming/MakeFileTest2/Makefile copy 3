@@ -1,15 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -MMD # Generate dependency files / include header file in dependency files
 
-DEBUG = -g
-OPTIMIZATION = -O2
-
-debug: CFLAGS += $(DEBUG)
-debug: app
-
-release: CFLAGS += $(OPTIMIZATION)
-release: app
-
 SRC = main.c add.c
 OBJ = $(SRC:.c=.o)
 DEP = $(SRC:.c=.d)
