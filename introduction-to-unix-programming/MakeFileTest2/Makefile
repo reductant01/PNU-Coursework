@@ -1,34 +1,9 @@
-CC = gcc
-CFLAGS = -Wall -MMD # Generate dependency files / include header file in dependency files
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c, %.o, $(SRC))
 
-DEBUG = -g
-OPTIMIZATION = -O2
-
-debug: CFLAGS += $(DEBUG)
-debug: app
-
-release: CFLAGS += $(OPTIMIZATION)
-release: app
-
-SRC = main.c add.c
-OBJ = $(SRC:.c=.o)
-DEP = $(SRC:.c=.d)
-
-.PHONY: all clean
-
-app: $(OBJ)
-	$(CC) $(CFLAGS) $^ -o $@
-
--include $(DEP)
-
-clean:
-	rm -rf app *.o
-
-helloTest: abc def
-	echo $@
-	echo $^
-	echo $<
-abc:
-#	echo abc
-def:
-#	echo def
+echo: $(SRC)
+	@echo $^
+	@echo $<
+	@echo $@
+	@echo $(OBJ)
+	@echo $(patsubst %.c, %.o, $(SRC))
