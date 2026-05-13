@@ -9,3 +9,13 @@ gcc -fPIC -c add.c
 gcc -shared -o libadd.so add.o
 
 export LD_LIBRARY_PATH=.
+
+--------------------------------------------------------------------------------------------------------------------
+
+gcc -g test.c -o test
+
+gdb ./test (gdb 실행)
+
+(gdb) break main (main 함수에 breakpoint 설정)
+(gdb) run (실행)
+(gdb) q (gdb 종료)

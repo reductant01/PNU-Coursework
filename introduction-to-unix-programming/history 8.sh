@@ -7,3 +7,7 @@ gcc -Wall ( warning 메시지 출력 )
 gcc -O0 ( optimization, 실행 속도 최적화 안함 )
 gcc -O2 ( optimization, 실행 속도 최적화 2단계 )
 gcc -O3 ( optimization, 실행 속도 최적화 3단계 )
+
+$@ = target file name
+$^ = all dependencies
+$< = first dependency
